@@ -1,0 +1,635 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
+  /* background-color: white; */
+  /* outline: 2px solid red; */
+}
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body{
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */
+
+
+
+/* Navbar section */
+.navBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  /* border-bottom: solid 2px rgb(203, 0, 0); */
+  position: sticky;
+}
+
+.brandTitle,
+.brandTitle a{
+  text-transform: uppercase;
+  font-size: 2.10rem;
+  font-weight: 500;
+  margin: .5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.brandTitle a{
+  font-family: 'Cairo', sans-serif;
+  font-weight: 400;
+}
+
+/* Navbar section */
+
+.navBar ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-content: center;
+}
+
+.navBar li{
+  list-style: none;
+}
+
+
+.navBar li a {
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+}
+
+.navBar li a::after{
+  content: '';
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+  border-radius: 5%;
+}
+
+.navBar a:visited{
+  color: white;
+}
+
+.navBar li a:hover::after{
+  width: 100%;
+}
+
+.brandTitle{
+  transition: 0.3s ease;
+  background-color: black;
+}
+
+.brandTitle:hover {
+  transform: scale(1.2);
+}
+
+.brandTitle a{
+  background-color: black;
+  color: white;
+  transition: 0.3s ease;
+  font-weight: 200;
+}
+.brandTitle a:hover {
+  color: white;
+}
+
+
+
+
+/* ----------------- end of navbar section */
+
+.toggle-button{
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+/* ------------------------------------------------------------- */
+
+/* Body */
+
+.hero{
+  display: flex;
+  padding: 0 0 15px 0;
+  height: 800px;
+  /* overflow: hidden; */
+  background-image: url('./Images/layered-waves-haikei.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* to fit different devices Vertically  */
+@media (min-height:900px){
+  .hero{
+    display: flex;
+    padding: 0 0 15px 0;
+    height: 1300px;
+    /* overflow: hidden; */
+    background-image: url('./Images/layered-waves-haikei.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.it{
+  font-size: 1.75rem;
+  text-align: center;
+  margin: auto;
+  width: 35%;
+  background: transparent;
+  color: ghostwhite;
+  font-weight: 100;
+  -webkit-animation: fadein 5s;
+}
+
+/* to fit different devices Vertically  */
+@media (min-height:900px){
+  .it{
+    font-size: 1.75rem;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 25%;
+    width: 35%;
+    background: transparent;
+    color: ghostwhite;
+    font-weight: 100;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+#wrapper{
+  margin: auto;
+  width: 100%;
+}
+
+/* ----------- About section ----------- */
+
+#aboutAnchor{
+  margin-bottom: 50px;
+  width: 100%;
+  color: black;
+  background: transparent;
+}
+
+
+
+#about{
+  margin: 0 0 300px 0;
+}
+
+
+/* below is on bigger screens */
+.aboutMe{
+  height: 1250px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 400px;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* to fit different devices Vertically for smaller screens*/
+@media (max-height:900px){
+  .aboutMe{
+    height: 900px;
+    width: 100%;
+    margin: auto;
+    padding-top: 13%;
+    text-align: center;
+    background: transparent;
+    overflow: hidden;
+  }
+}
+
+
+.video{
+  height: 1300px;
+  width: 100%;
+  transform: rotate(180deg);
+  position: absolute;
+  z-index: -1;
+  opacity: 90%;
+  filter: blur(3px);
+  filter: brightness(0.6);
+  object-fit: cover;
+}
+
+.me{
+  font-size: 1.75rem;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+}
+
+.row{
+  display: flex;
+  height: auto;
+  width: 95%;
+  margin: 2%;
+  justify-content: space-between;
+}
+
+.me-col{
+  width: 90%;
+  background: whitesmoke;
+  opacity: 75%;
+  margin: 2%;
+  padding: 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+
+.me-col:hover{
+  /* box-shadow: 0 0 10px 3px rgb(118, 118, 118); */
+  opacity: 100%;
+}
+
+.me-col h3{
+  margin: auto;
+  font-weight: 300;
+  width: 78%;
+  background: whitesmoke;
+  padding: 2px;
+}
+
+.me-col p{
+  height: auto;
+  width: 80%;
+  padding: 5px;
+  margin: auto;
+  background: whitesmoke;
+}
+
+.me-col .nice{
+  font-weight: 600;
+}
+
+.me-col img{
+  background-color: whitesmoke;
+  width: 1.7em;
+  padding: 2px;
+  vertical-align: middle;
+}
+
+
+/* ------------------------------------------------------------- */
+/* ----------- CONTACT section ----------- */
+
+footer{
+  height: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  background-image: url('./Images/layered-waves-haikei-footer.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.email-form{
+  position: absolute;
+  margin-top: 50%;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+}
+
+.name{
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
+.email{
+  width: 200px;
+  height: 100px;
+  box-sizing: border-box;
+  resize: vertical;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
+.send{
+  width: 100px;
+  align-self: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
+#contact a{
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  margin-top: 65rem;
+}
+
+
+#contact img{
+  transition: all 0.4s ease;
+  filter: grayscale(90%) brightness(70%);
+  background: transparent;
+  width: 45px;
+}
+#contact img:hover{
+  filter: grayscale(0%);
+  transform: rotate(360deg);
+}
+
+
+.lastItem{
+  width: 100%;
+  text-align: center;
+}
+
+.lastItem p{
+  background: black;
+  color: rgb(124, 124, 124);
+  font-weight: 200;
+}
+
+
+
+/* For the blinking effect */
+h1:after {
+    content: '|';
+    font-weight: bold;
+    opacity: 0;
+    animation: blink 0.7s linear infinite alternate;
+  }
+  
+  @keyframes blink {
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.8;
+    }
+}
+
+/* ------------------------------------------------------------- */
+
+/* Screen size changes */
+@media (max-width: 600px) {
+  /* blink effect */
+  h1.it::after {
+    content: '|';
+    margin-top: 104px;
+    margin-left: 155px;
+    position: absolute;
+  }
+  
+  @keyframes blink {
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.8;
+    }
+}
+
+  .computer{
+    width:55%;
+    flex: 1;
+  }
+
+
+  .wrapper{
+    width: 100%;
+  }
+
+  .it{
+    display: flex;
+    height: 500px;
+    width: 200px;
+  }
+
+  .toggle-button{
+    display: flex;
+    top: 1.8rem;
+    background-color: black;
+  }
+
+  .toggle-button .bar{
+    background-color: white;
+  }
+
+  .navLinks{
+    display: none;
+    width: 100%;
+  }
+
+  .navBar{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navLinks ul{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navLinks li{
+    text-align: center;
+  }
+
+  .navLinks li a {
+    padding: .5rem 1rem;
+  }
+
+  .navLinks.active{
+    display: flex;
+  }
+
+  .navbar{
+    width: fit-content;
+  }
+
+
+  .navBar li a::after{
+    content: '';
+  }
+  
+  .navBar li a:hover::after{
+    width: 0;
+  }
+
+
+  main img{
+    margin-top: 130px;
+    width: 55%;
+    height: 55%;
+    align-items: baseline;
+    background-color: transparent;
+  }
+
+  .aboutMe{
+    padding-top: 10%;
+    height: auto;
+  }
+
+  .video{
+    position: absolute;
+    z-index: -1;
+    opacity: 90%;
+    filter: blur(3px);
+    filter: brightness(0.6);
+    object-fit: cover;
+  }
+
+  .row{
+    display:inline-block;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .me-col{
+    padding: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(228, 228, 228);
+    opacity: 75%;
+  }
+
+  /* below does NOT change the opacity while scrolling on touch-screen devices */
+  .me-col:hover{
+    /* box-shadow: 0 0 10px 3px rgb(118, 118, 118); */
+    opacity: 75%;
+  }
+
+
+  .me-col h3, .me-col p, .me-col img{
+    background-color: rgb(228, 228, 228);
+  }
+
+
+  footer{
+    height: 900px;
+  }
+
+  #contact a{
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50em;
+  }
+
+  #contact img{
+    filter:  brightness(80%);
+    background: transparent;
+    width: 35px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+/* @media (min-width: 360px){
+  main img{
+    margin-top: 40%;
+  }
+}
+
+@media (min-width: 500px){
+  main img{
+    margin-top: 30%;
+  }
+}
+
+
+@media (min-width: 550px){
+  main img{
+    margin-top: 20%;
+  }
+}
+
+@media (min-width: 601px) {
+
+  main img{
+    height: 55%;
+    width: 55%;
+    margin-top: 7%;
+  }
+
+
+
+}
+
+@media (min-width: 740px){
+  main img{
+    margin-top: 7%;
+  }
+}
+
+
+@media (min-width: 800px){
+  main img{
+    margin-top: 1%;
+  }
+}
+
+@media (min-width: 970px){
+  main img{
+    margin-top: -6%;
+  }
+}
+
+@media (min-width: 1170px){
+  main img{
+    margin-top: -7%;
+  }
+}
+
+@media (min-width: 1320px){
+  main img{
+    margin-top: -10%;
+  }
+} */
+
+
