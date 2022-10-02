@@ -585,12 +585,7 @@ h1:after {
   }
 
   .video{
-    position: absolute;
-    z-index: -1;
-    opacity: 90%;
-    filter: blur(3px);
-    filter: brightness(0.6);
-    object-fit: cover;
+    display: none;
   }
 
   .row{
