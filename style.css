@@ -315,7 +315,7 @@ body{
 /* ----------- CONTACT section ----------- */
 
 footer{
-  height: 1200px;
+  height: 900px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -326,44 +326,117 @@ footer{
   background-size: cover;
 }
 
-.email-form{
-  position: absolute;
-  margin-top: 50%;
+@media (min-height:900px){
+  footer{
+    height: 1300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    background-image: url('./Images/layered-waves-haikei-footer.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+#message{
+  font-size: 1.75rem;
+  text-align: center;
+  margin-top: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  width: 25em;
   background: transparent;
-  border: none;
+  color: ghostwhite;
+  font-weight: 100;
+}
+
+.email-form{
+  display: block;
+  position: relative;
+  align-items: center;
+  margin: auto;
+  background: transparent;
+  border: 1px;
   border-radius: 10px;
+  text-align: center;
 }
 
 .name{
-  width: 200px;
+  width: 20em;
   padding: 10px;
   border-radius: 10px;
-  background-color: aliceblue;
+  background-color: rgb(206, 206, 206);
+  opacity: 65%;
+  margin: 5px;
+}
+
+.return-email{
+  width: 20em;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(206, 206, 206);
+  opacity: 65%;
+  margin: 5px;
+}
+
+.subject{
+  width: 20em;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(206, 206, 206);
+  opacity: 65%;
+  margin: 5px;
 }
 
 .email{
-  width: 200px;
+  width: 20em;
   height: 100px;
   box-sizing: border-box;
   resize: vertical;
   padding: 10px;
   border-radius: 10px;
-  background-color: aliceblue;
+  background-color: rgb(206, 206, 206);
+  opacity: 65%;
+  flex-wrap: wrap;
+  margin: 5px;
 }
 
 .send{
   width: 100px;
   align-self: center;
   padding: 10px;
+  border: none;
   border-radius: 10px;
-  background-color: aliceblue;
+  background-color: rgb(206, 206, 206);
+  opacity: 65%;
+  margin: 5px;
+}
+
+.send:hover{
+  background-color: rgb(0, 153, 255);
+  transition: 0.4s;
+}
+
+.links{
+  position: absolute;
+  margin-top: 800px;
+}
+
+@media (min-height:1000px){
+  .links{
+    position: absolute;
+    margin-top: 1200px;
+  }
 }
 
 #contact a{
-  height: 20px;
-  width: 20px;
+  width: 45px;
   background: transparent;
-  margin-top: 65rem;
+  margin-top: 65em;
+  padding: 10px;
 }
 
 
@@ -551,8 +624,7 @@ h1:after {
   }
 
   #contact a{
-    height: 20px;
-    width: 20px;
+    width: 35px;
     background: transparent;
     margin-left: auto;
     margin-right: auto;
