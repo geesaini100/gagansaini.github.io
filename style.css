@@ -247,8 +247,7 @@ body{
   transform: rotate(180deg);
   position: absolute;
   z-index: -1;
-  opacity: 90%;
-  filter: blur(3px);
+  opacity: 94%;
   filter: brightness(0.6);
   object-fit: cover;
 }
